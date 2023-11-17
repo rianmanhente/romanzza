@@ -43,19 +43,32 @@ header {
     transition: all .45s ease;
 }
 
-.title-universo {
-    /* color: #aaa097; */
-    color: white;
-    font-size: 3.2rem;
-    font-weight: 700;
-    
-}
+  .title-universo {
+      /* color: #aaa097; */
+      color: white; 
+      font-size: 3.2rem;
+      font-weight: 700;
+      /* z-index: 1; */
+  }
 
 .rio {
     /* font-weight: 300; */
     font-size: 28px;
     font-weight: 300;
     color: white;
+}
+
+.shopping {
+  /* font-weight: 300; */
+  font-size: 28px;
+  font-weight: 300;
+  color: white;
+}
+
+@media screen and (max-width: 1660px) {
+    .shopping {
+      display: none;
+    }
 }
 
 .logo {
@@ -95,7 +108,7 @@ section {
     padding: 160px 15% 120px;
 }
 
-.home {
+/* .home {
     position: relative;
     height: 100%;
     width: 100%;
@@ -104,6 +117,29 @@ section {
     background-position: center;
     display: flex;
     align-items: center;
+      
+} */
+
+.home {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assetsprojetos/projetoCozinha3.jpeg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7; /* Opacidade aplicada apenas ao fundo */
+  z-index: -1;
 }
 
 .slide {
@@ -135,6 +171,7 @@ section {
     color: var(--text-color);
     list-style: 1.1;
     margin: 0 0 8px;
+    z-index: 1;
 }
 
 .home-text h3 {
@@ -143,6 +180,7 @@ section {
     font-size: 3rem;
     font-weight: 700;
     line-height: 1.1;
+    z-index: 1;
 }
 
 .home-text p {
@@ -150,6 +188,7 @@ section {
     font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 40px;
+    z-index: 1;
 }
 
 .button {
@@ -975,6 +1014,7 @@ button:hover {
 
 .container {
   /* max-width: 2200px; */
+  max-width: 1200px;
 }
 .slider-wrapper {
   position: relative;
